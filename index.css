@@ -1,0 +1,75 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+#content{
+	width: 100%;
+	height: 100%;
+}
+
+#pieDetailsText{
+	font-size: 12px;
+	font-family: sans-serif
+}
+
+#gDetails > g > text{
+	font-family: sans-serif
+}
+
+#gLegend > text{
+	font-family: sans-serif
+}
+
+
+.dodTitle{
+	text-anchor: middle;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.dodHeading{
+	font-size: 16px;
+	text-decoration:underline;
+}
+
+.dodAttrName{
+	font-size: 14px;
+	font-weight: bold;
+	text-anchor: start;
+}
+
+.dodAttrValue, .dodAttrValue>tspan{
+	font-size: 14px;
+}
+
+.dodLegendCat{
+	font-size: 12px;
+}
+
+#pieTitleText{
+	font-family: sans-serif
+}
+
+.node circle {
+  fill: #fff;
+  stroke-width: 1.5px;
+}
+
+.node rect {
+  fill: #fff;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}

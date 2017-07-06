@@ -1,0 +1,1 @@
+All code was created from scratch, unless specified otherwise.

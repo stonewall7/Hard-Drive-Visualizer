@@ -1,0 +1,67 @@
+File for storing updates and patch notes
+
+4/8:
+added RUN_VIS.py, which allows user to select folder to analyze for files before opening website
+
+4/10:
+updated pie chart with option buttons and result details
+increased size of pie svg
+
+4/11:
+Made pie chart look better for 1366x768 resolution
+Implemented file type to category mapping and file category to color mapping
+Pie slices are sorted by value
+
+4/12:4/16
+Pie Chart SVG and Details On Demand SVG now have fixed size of 200px. This is to ensure scalability on all computer resolutions.
+
+4/12 (6pm):
+Changed DoD fixed size to 300px
+Created Details on Demand content
+Created File Type Legend in DoD
+Added setCurr(newCurr) to main.js, which should always be called instead of manually setting curr
+Updated css for DoD text classes
+
+4/14:
+Fixed python 3 issues. Implemented basic tree map, non interactive 
+
+4/15:
+Added a couple more file types
+Added header title
+Added white background to pie chart and dod, so tree map doesn't show behind it
+
+4/15(8 PM):
+Style Changes
+Added exe of python file created in py2exe. All folders and files related to this are hidden. Run RUN_VIS.exe.
+
+4/15 (11:30 PM):
+Fixed bug with pie chart sometimes not showing details on hoverover
+
+4/16 (00:17 AM):
+Added code to:	Draw rectangles for folders, circles for files
+				Only show file names at certain levels (depth<3)
+Moved styles from index.html to index.css
+
+4/16 (6 PM):
+Implemented potential solution to text overflow on file path names; utilizing select options.
+
+4/16 (6:01 PM):
+Eliminated File Path Name for Center Node.
+
+4/17 (10:40 PM):
+Color Nodes in Tree Map According to Color Legend
+
+4/22:
+File and Folder objects now have an fid (file id), which is just the unique index of the file/folder in the tsv
+setCurr(newCurrIdx) now takes in the index (or fid) of the folder to set as the new curr
+In treemap.js
+	Moved major chunk of code out of the d3.tsv block and commented out the rest of the block. Also modified this code to create tree using curr as root instead of having to reread the entire tsv.
+	MakeTree adds fid to json, so it can be known to the tree rect elements
+	Clicking on tree rect calls setCurr with the known fid. This resets the vis with the corresponding folder as the new root
+Implemented history feature which allows users to go forward and back in the curr root history
+
+4/23:
+Implemented brushing, zoom/pan, file details on demand
+File names only showing on hover or through brushing
+Changed file circle to fill color, outline thin black
+Finalized everything
